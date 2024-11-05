@@ -184,7 +184,7 @@ const PatientTable = ({
 
   const unread = (row) => (row.is_read === false ? "unread" : "");
   const selected = (row) => (row.id === selectedRow?.id ? "selected" : "");
-  const archived = (row) => (row.archived === false ? "archived" : "");
+  const archived = (row) => (row.is_archived === false ? "archived" : "");
 
   return (
     <>

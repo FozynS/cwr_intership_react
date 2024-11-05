@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container } from "react-bootstrap";
 
-import { getAllSms } from "../../api/pages/sms-page";
+import { getAllSms, getUnreadCount } from "../../api/pages/sms-page";
 
 import SmsPageContext from "../../contexts/SmsPageContext";
 
@@ -70,7 +70,7 @@ const SmsFromPatient = () => {
   useEffect(() => {
     setIsLoading(true);
   
-    getAllSms(currentPage, activeTab)
+    getAllSms(activeTab, currentPage)
     .then((response) => {
       if (response.status === 200) {
         updateData(response);
@@ -89,12 +89,14 @@ const SmsFromPatient = () => {
   }, [currentPage, activeTab]);  // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
-    const unreadCount = initialPatientData.reduce((count, item) => {
-      return count + (item.is_read ? 0 : 1);
-    }, 0);
-
-    setUnreadCount(unreadCount);
-  }, [initialPatientData]);
+    getUnreadCount().then(response => {
+      if (response.status === 200 && response.data) {
+        setUnreadCount(response.data);
+      } else {
+        setUnreadCount(0);
+      }
+    })
+  }, [currentPage, activeTab]);
 
   return (
     <SmsPageContext.Provider

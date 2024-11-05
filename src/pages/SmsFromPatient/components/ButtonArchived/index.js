@@ -13,57 +13,29 @@ const ButtonArchived = () => {
   } = useContext(SmsPageContext);
 
 
-  const toggleArchiveButtonHandler = () => {
-    if (!markedRows.length && selectedRow) {
-      setSmsAsArchived([selectedRow])
-        .then((response) => {
-          if (response.status === 200) {
-            selectedRow.is_archived = !selectedRow.is_archived;
-          }
-        })
-        .finally(() => {
-          setIsLoading(false);
-        });
-    }
-
+  const toggleArchiveButtonHandler = async () => {
     if (markedRows.length && !selectedRow) {
       let markedArray = [];
       markedRows.forEach((row) => {
         markedArray.push(row.original);
       });
-      setSmsAsArchived([...markedArray])
-        .then((response) => {
-          if (response.status === 200) {
-            let changedRowArray = [...markedArray];
-            changedRowArray.forEach((row) => {
-              row.is_archived = !row.is_archived;
-            });
-          }
+      await Promise.all(
+        markedArray.map(item => {
+          setSmsAsArchived(item)
+          .then((response) => {
+            if (response.status === 200) {
+              let changedRowArray = [...markedArray];
+              changedRowArray.forEach((row) => {
+                row.is_archived = !row.is_archived;
+              });
+            }
+          })
+          .finally(() => {
+            setIsLoading(false);
+            markedRows.forEach((row) => row.toggleRowSelected());
+          });
         })
-        .finally(() => {
-          setIsLoading(false);
-          markedRows.forEach((row) => row.toggleRowSelected());
-        });
-    }
-
-    if (markedRows.length && selectedRow) {
-      let markedArray = [];
-      markedRows.forEach((row) => {
-        markedArray.push(row.original);
-      });
-      setSmsAsArchived([selectedRow, ...markedArray])
-        .then((response) => {
-          if (response.status === 200) {
-            let changedRowArray = [selectedRow, ...markedArray];
-            changedRowArray.forEach((row) => {
-              row.is_archived = !row.is_archived;
-            });
-          }
-        })
-        .finally(() => {
-          setIsLoading(false);
-          markedRows.forEach((row) => row.toggleRowSelected());
-        });
+      )
     }
   };
 
