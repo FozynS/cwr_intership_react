@@ -1,0 +1,110 @@
+$font-family-base: "Open Sans", Arial, sans-serif;
+
+$body-bg: #f3f6f9;
+$body-color: #3e4855;
+
+$primary: #2d85c9;
+$info: #d2e9f5;
+
+$secondary: #e9e9e9;
+
+$btn-font-size: 14px;
+$btn-padding-x: 24px;
+$btn-padding-y: 7px;
+$btn-font-weight: 600;
+$btn-disabled-opacity: 0.5;
+$btn-focus-box-shadow: none !important;
+
+$navbar-nav-link-padding-x: 0;
+
+$input-btn-font-family: "Open Sans", Arial, sans-serif;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+    xxxl: 1919px,
+);
+
+// custom classes
+
+.tooltip {
+    --bs-tooltip-max-width: 500px !important;
+}
+
+.table tr {
+    &:hover {
+        background: #e7e7e7;
+    }
+}
+
+.btn.outline-secondary {
+    color: $body-color;
+}
+
+.btn-primary {
+    color: #FFFFFF !important;
+}
+
+.btn-outline-primary:hover {
+    color: #FFFFFF !important;
+}
+
+.btn.outline-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 19px;
+    padding: 0 21px;
+    color: $body-color;
+}
+
+.btn.outline-toggle .counter {
+    color: #2d85c9;
+}
+
+.btn.outline-toggle:hover {
+    background-color: rgba($info, 0.5);
+}
+
+.btn-toolbar .outline-toggle {
+    font-weight: 400;
+}
+
+.btn-toolbar .btn-check:checked + .outline-toggle {
+    color: $body-color;
+    font-weight: bold;
+    background-color: $info;
+}
+
+.rounded-5 {
+    border-radius: 6px;
+}
+
+.rounded-top-5 {
+    border-radius: 6px 6px 0 0;
+}
+
+//colors
+
+.bg-dark-gray {
+    background-color: #616161;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.fs-16 {
+    font-size: 16px
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";

@@ -1,0 +1,43 @@
+.actionsButton {
+    cursor: pointer;
+
+    svg {
+        display: block !important;
+    }
+
+    .menuDialog {
+        position: absolute;
+        right: 0;
+        transform: translate(-20px, 10px);
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #DEDEDE;
+        font-weight: 600;
+        border-radius: 8px;
+        background-color: white;
+        cursor: pointer;
+        white-space: nowrap;
+        z-index: 1;
+        text-align: left;
+        color: inherit;
+        overflow: hidden;
+        z-index: 999;
+
+        .menuItem {
+            padding: 5px 15px;
+        }
+
+        .menuItem:hover {
+            background-color: #e7f2f6;
+        }
+    }
+}
+
+.actionsButton:hover {
+    cursor: pointer;
+
+    svg {
+        display: block !important;
+        color: rgb(51, 134, 199);
+    }
+}

@@ -1,0 +1,32 @@
+.indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    height: 15px;
+    width: 15px;
+}
+
+.green {
+    background-color: green;
+
+    svg {
+        color: white;
+    }
+}
+
+.yellow {
+    background-color: #F39C12;
+
+    svg {
+        color: black;
+    }
+}
+
+.red {
+    background-color: red;
+
+    svg {
+        color: white;
+    }
+}

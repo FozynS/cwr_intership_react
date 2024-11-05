@@ -1,0 +1,18 @@
+.optionComponent {
+    padding: 0;
+
+    .option {
+        cursor: pointer;
+        padding: 3px;
+
+    }
+
+    .option:hover {
+        background-color: #e7f2f6;
+    }
+
+    .groupTitle {
+        font-weight: 600;
+    }
+
+}

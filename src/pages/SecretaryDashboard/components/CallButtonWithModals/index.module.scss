@@ -1,0 +1,24 @@
+.callButton {
+    background-color: #2d85c9;
+    border-color: #2d85c9;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 14px;
+    width: fit-content;
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 4px 6px;
+    border: none;
+
+    &:hover {
+        background-color: #4d97d1;
+        border-color: #4291ce;
+    }
+
+    &:disabled {
+        pointer-events: none;
+        background-color: #2d85c9;
+        border-color: #2d85c9;
+        opacity: 0.5;
+    }
+}

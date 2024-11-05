@@ -1,0 +1,17 @@
+.circle-loader {
+    min-height: 230px;
+
+    &--absolute {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}
+
+.spinner-border-small {
+    --bs-spinner-width: 1.5rem;
+    --bs-spinner-height: 1.5rem;
+    --bs-spinner-border-width: 0.2em;
+}

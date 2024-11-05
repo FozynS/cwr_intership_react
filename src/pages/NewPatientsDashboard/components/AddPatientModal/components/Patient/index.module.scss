@@ -1,0 +1,26 @@
+.patient {
+    font-size: 14px;
+    font-weight: 400;
+    color: #3E4855;
+    border-bottom: 1px solid #E0E5F3;
+    cursor: pointer;
+
+    .name {
+        font-size: 14px;
+        font-weight: 600;
+        color: #000000;
+    }
+
+    .email {
+        font-size: 12px;
+    }
+
+    .status {
+        font-size: 12px;
+        font-weight: 600;
+    }
+}
+
+.patient:hover {
+    background-color: #EFF6FB;
+}

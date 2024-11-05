@@ -1,0 +1,13 @@
+.durationIndicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid rgb(186, 186, 186);
+    background-color: #f7f7f7;
+    border-radius: 100px;
+    width: 28px;
+    height: 28px;
+    gap: 3px;
+    font-size: 12px;
+    font-weight: 600;
+}

@@ -1,0 +1,22 @@
+.showFormButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3E4855;
+    padding: 16px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.inputNumber {
+    -moz-appearance: textfield;
+}
+
+.inputNumber::-webkit-inner-spin-button,
+.inputNumber::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

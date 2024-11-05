@@ -1,0 +1,46 @@
+.tabsContainer {
+    background-color: white;
+    padding-bottom: 12px;
+    overflow: hidden;
+    z-index: 1;
+    border: none;
+}
+
+.tabs {
+    border-radius: 6px;
+    border: 0.5px solid #D9D9D9;
+    background-color: #F3F6F9;
+}
+
+.tab {
+    padding: 0;
+    border-radius: 6px;
+    border: none;
+}
+
+.active {
+    background-color: rgb(51, 134, 199);
+    cursor: default;
+}
+
+.title.active:hover {
+    background-color: rgb(51, 134, 199);
+}
+
+.title {
+    padding: 10px 0;
+    border-radius: 6px;
+}
+
+.title:hover {
+    background-color: rgb(241, 241, 241);
+}
+
+.text {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #404A57
+}

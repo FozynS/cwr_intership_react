@@ -1,0 +1,132 @@
+.secretaryDashboard {
+    //
+}
+
+.dashboardCard {
+    border: 1px solid #D9D9D9;
+    border-radius: 6px;
+    background: #FFFFFF;
+}
+
+.title {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 0;
+}
+
+.dashboardTableWrapper {
+    max-height: 518px;
+    border: 0.5px solid rgb(217, 217, 217);
+    overflow: auto;
+
+    & > table > thead {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+}
+
+.selectBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 14px;
+
+    &.disabled {
+        cursor: not-allowed;
+    }
+}
+
+.cross {
+    position: absolute;
+    fill: rgb(204, 204, 204);
+}
+
+.cross:hover {
+    fill: rgb(153, 153, 153)
+}
+
+.selectCross {
+    right: 43px;
+    top: 8px;
+}
+
+.searchInput {
+    width: 250px;
+    height: 38px;
+    padding-left: 16px;
+    background-color: #fff;
+    transition: all 100ms;
+    border-color: hsl(0, 0%, 80%);
+
+    &:disabled {
+        background-color: #fff;
+        border-color: hsl(0, 0%, 90%);
+        cursor: not-allowed;
+    }
+
+    &:hover:enabled {
+        border-color: hsl(0, 0%, 70%);
+    }
+
+    &:focus {
+        background-color: #fff;
+    }
+}
+
+.formCheck {
+    &.disabled {
+        .formCheckInput {
+            cursor: not-allowed;
+        }
+
+        .formCheckLabel {
+            cursor: not-allowed;
+        }
+    }
+
+    .formCheckInput {
+        cursor: pointer;
+    }
+
+    .formCheckLabel {
+        font-size: 14px;
+        cursor: pointer;
+        font-weight: 600;
+        margin-top: 1px;
+    }
+}
+
+.tableActionButton {
+    height: 22px;
+    font-size: 12px;
+    padding: 2px 8px;
+}
+
+.formGroup  {
+    .formInput {
+        background-color: #fff;
+    }
+
+    .formLabel {
+        font-weight: 600;
+    }
+}
+
+.formGroupHasError {
+    .formInput {
+        border-color: #dc3545;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    }
+
+    .formLabel {
+        color: #dc3545;
+    }
+
+    .formErrors {
+        color: #dc3545;
+    }
+}

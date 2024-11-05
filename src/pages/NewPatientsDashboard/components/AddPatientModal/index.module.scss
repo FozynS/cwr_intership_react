@@ -1,0 +1,34 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.patientInfo {
+    flex: 1;
+    padding: 16px 16px 16px 0;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #D3DAE3;
+    flex: 1;
+}
+
+.clearSelectedPatientIcon {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+}
+
+.btnClearSelectedPatient {
+    position: absolute;
+    right: 0;
+    top: 11px;
+}

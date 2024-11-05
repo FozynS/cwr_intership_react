@@ -1,0 +1,25 @@
+.cross {
+    position: absolute;
+    fill: rgb(204, 204, 204);
+}
+
+.cross:hover {
+    fill: rgb(153, 153, 153)
+}
+
+.submittedBySelect {
+    width: 100%;
+}
+
+.submittedByCross {
+    right: 45px
+}
+
+.searchCross {
+    right: 8px;
+}
+
+.btnFetchTableData {
+    height: 38px !important;
+    margin-top: 28px;
+}

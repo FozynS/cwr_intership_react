@@ -1,0 +1,11 @@
+.laneHeader {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    padding: 0 8px;
+    font-weight: 600;
+
+    .label {
+        color: #3386C7;
+    }
+}

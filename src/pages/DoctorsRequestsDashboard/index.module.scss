@@ -1,0 +1,151 @@
+.secretaryDashboard {
+    //
+}
+
+.dashboardCard {
+    border: 1px solid #D9D9D9;
+    border-radius: 6px;
+    background: #FFFFFF;
+}
+
+.title {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 0;
+}
+
+.dashboardTableWrapper {
+    max-height: 518px;
+    overflow: auto;
+    border: 0.5px solid #D9D9D9;
+    border-radius: 4px;
+
+    & > table > thead {
+        position: sticky;
+        top: 0;
+    }
+}
+
+.tabLink {
+    width: fit-content;
+    color: inherit;
+    border-bottom: 1px solid;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.tabLink:hover {
+    color: rgb(80, 193, 254)
+}
+
+.formGroup  {
+    .formInput {
+        background-color: #fff;
+    }
+
+    .formLabel {
+        font-weight: 600;
+    }
+}
+
+.formGroupHasError {
+    .formInput {
+        border-color: #dc3545;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    }
+
+    .formLabel {
+        color: #dc3545;
+    }
+
+    .formErrors {
+        color: #dc3545;
+    }
+}
+
+.tableActionButton {
+    height: 22px;
+    font-size: 12px;
+    padding: 2px 8px;
+    line-height: normal;
+}
+
+.searchInput {
+    width: 250px;
+    height: 38px;
+    padding-left: 16px;
+    background-color: #fff;
+    transition: all 100ms;
+    border-color: hsl(0, 0%, 80%);
+
+    &:disabled {
+        background-color: #fff;
+        border-color: hsl(0, 0%, 90%);
+        cursor: not-allowed;
+    }
+
+    &:hover:enabled {
+        border-color: hsl(0, 0%, 70%);
+    }
+
+    &:focus {
+        background-color: #fff;
+    }
+}
+
+.selectBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 14px;
+
+    &.disabled {
+        cursor: not-allowed;
+    }
+}
+
+.actionsButton {
+    cursor: pointer;
+
+    svg {
+        display: block !important;
+    }
+
+    .menuDialog {
+        position: absolute;
+        right: 0;
+        transform: translate(-20px, 10px);
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #DEDEDE;
+        font-weight: 600;
+        border-radius: 8px;
+        background-color: white;
+        cursor: pointer;
+        white-space: nowrap;
+        text-align: left;
+        color: inherit;
+        overflow: hidden;
+        z-index: 999;
+
+        .menuItem {
+            padding: 5px 15px;
+        }
+
+        .menuItem:hover {
+            background-color: #e7f2f6;
+        }
+    }
+}
+
+.actionsButton:hover {
+    cursor: pointer;
+
+    svg {
+        display: block !important;
+        color: rgb(51, 134, 199);
+    }
+}

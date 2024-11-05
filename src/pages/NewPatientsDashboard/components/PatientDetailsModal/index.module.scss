@@ -1,0 +1,149 @@
+.header {
+    color: #000000;
+
+    .age {
+        font-size: 18px !important;
+        color: #3E4855
+    }
+}
+
+.patientDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    background-color: #F4F6F9;
+    border-radius: 8px;
+    font-size: 14px;
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .info {
+        background-color: #FFFFFF;
+        padding: 8px;
+        border-radius: 8px;
+
+        .field {
+            padding: 10px 8px;
+            font-weight: 600;
+            width: 115px;
+            flex-shrink: 0;
+        }
+
+        .value {
+            padding: 10px 8px;
+            max-width: calc(100% - 115px);
+            overflow-wrap: break-word;
+        }
+
+        .fieldTag {
+            padding: 10px 8px;
+            font-size: 13px;
+        }
+    }
+
+    .sendFormDialog {
+        position: absolute;
+        top: 30px;
+        left: -200px;
+        display: flex;
+        align-items: center;
+        width: 214px;
+        height: 40px;
+        background-color: #FFFFFF;
+        border-radius: 8px;
+        padding: 8px 16px;
+        white-space: nowrap;
+        font-weight: 400;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .sendFormDialog:hover {
+        background-color: #e7f2f6;
+    }
+}
+
+.commentTextarea {
+    overflow-y: auto;
+    height: 85px !important;
+    padding-right: 24px;
+    padding-top: 10px;
+}
+
+.clip {
+    position: absolute;
+    transform: rotate(90deg);
+    right: 0;
+    bottom: 4px;
+    cursor: pointer;
+}
+
+.clip:hover {
+    color: rgb(51, 135, 199);
+}
+
+.active {
+    color: inherit;
+}
+
+.completed {
+    color: #159815;
+}
+
+.rescheduled {
+    color: #FEC02F
+}
+.comment {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px 16px;
+    font-size: 14px;
+
+    .name {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .date {
+        white-space: nowrap;
+        font-size: 12px;
+        font-weight: 600;
+    }
+}
+
+.systemComment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+    border: 1px solid #DEDEDE;
+    border-radius: 8px;
+    padding: 24px 16px;
+    overflow: hidden;
+
+    .name {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .content {
+        flex-shrink: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .date {
+        font-size: 12px;
+        font-weight: 600;
+        flex-shrink: 0;
+    }
+}

@@ -1,0 +1,42 @@
+.secretaryDashboard {
+    //
+}
+
+.dashboardCard {
+    border: 1px solid #D9D9D9;
+    border-radius: 6px;
+    background: #FFFFFF;
+}
+
+.title {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 0;
+}
+
+.dashboardTableWrapper {
+    max-height: 518px;
+    overflow: auto;
+    border: 0.5px solid #D9D9D9;
+    border-radius: 4px;
+
+    & > table > thead {
+        position: sticky;
+        top: 0;
+    }
+}
+
+.tabLink {
+    width: fit-content;
+    color: inherit;
+    border-bottom: 1px solid;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.tabLink:hover {
+    color: rgb(80, 193, 254)
+}

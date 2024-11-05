@@ -1,0 +1,25 @@
+.scroll {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  max-height: 595px;
+  margin-bottom: auto;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #C4C4C4;
+    border-radius: 2px;
+  }
+}
+
+.canvas {
+  canvas {
+    margin: auto auto;
+  }
+}

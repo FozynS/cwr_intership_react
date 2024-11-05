@@ -1,0 +1,50 @@
+.messagesCard {
+    height: calc(100vh - 96px);
+    border: 1px solid #D9D9D9;
+    border-radius: 6px;
+    background: #FFFFFF;
+    position: relative;
+    overflow: auto;
+
+    tr {
+        cursor: pointer;
+    }
+
+    th {
+        border-bottom: 1px solid black;
+    }
+    
+    td {
+        max-width: 120px;
+        padding: 0 8px !important;
+    }
+
+    thead {
+        tr:hover {
+            cursor: default;
+            background: none !important;
+        }
+    }
+}
+
+.title {
+    background-color: rgb(243, 246, 249);
+    position: sticky;
+    top: 0
+}
+
+.text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.loader {
+    top: 0;
+    height: 45px;
+}
+
+

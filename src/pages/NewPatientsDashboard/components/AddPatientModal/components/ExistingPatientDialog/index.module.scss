@@ -1,0 +1,15 @@
+.existingPatientDialog {
+    position: absolute;
+    top: 45px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0px 18px 80px 0px #244A6A0F;
+    max-height: 400px;
+    overflow: auto;
+    z-index: 1;
+
+    .noData {
+        font-size: 14px;
+    }
+}

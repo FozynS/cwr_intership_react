@@ -1,0 +1,81 @@
+.patientCard {
+    border: 1px solid #DEDEDE;
+    border-radius: 8px;
+    background-color: white;
+    overflow: hidden;
+    width: 280px;
+    cursor: pointer;
+
+    .patientInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px;
+        font-size: 14px;
+
+        .patientName {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .patientStatus {
+            font-weight: 600;
+        }
+    }
+
+    .dates {
+        padding: 0 10px;
+        font-size: 12px;
+    }
+
+    .therapistInfo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 8px 16px;
+        color: #3386C7;
+        background-color: #F9FAFB;
+
+        .providerName {
+            display: flex;
+            gap: 8px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            div {
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+
+        .active {
+            color: inherit;
+        }
+
+        .completed {
+            color: #159815;
+        }
+
+        .rescheduled {
+            color: #FEC02F
+        }
+    }
+}
+
+.patientCard:hover {
+    border-color: #B3E0FF !important;
+    background-color: #E1F5FE !important;
+
+    .therapistInfo {
+        background-color: #E1F5FE !important;
+    }
+}
+
+.archived {
+    flex-direction: row-reverse;
+
+    .threeDotsButton {
+        visibility: hidden;
+    }
+}

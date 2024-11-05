@@ -1,0 +1,74 @@
+.diagnosesSelect {
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #F7F9FC;
+        border-radius: 8px;
+        padding: 12px;
+
+        .diagnose {
+            color: #FFFFFF;
+            background-color: #60A3EE;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+    }
+
+    .inputSelect {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+
+        .arrow {
+            position: absolute;
+            right: 5px;
+        }
+    }
+
+    .options {
+        position: absolute;
+        top: 102%;
+        background-color: #FFFFFF;
+        padding: 8px 16px 8px 0;
+        border-radius: 8px;
+        width: 100%;
+        max-height: 400px;
+        overflow: auto;
+        z-index: 1;
+        box-shadow: 0px 18px 80px 0px #244A6A0F;
+
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 8px 16px;
+            font-weight: 400;
+
+            input[type="checkbox"] {
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+                flex-shrink: 0;
+            }
+
+            label {
+                width: 100%;
+                cursor: pointer;
+                font-size: 14px !important
+            }
+        }
+
+        .noData {
+            font-size: 14px;
+        }
+
+        .option:hover {
+            background-color: #EFF6FB;
+        }
+    }
+}

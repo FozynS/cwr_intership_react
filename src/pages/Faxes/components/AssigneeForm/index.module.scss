@@ -1,0 +1,131 @@
+.formWrapper {
+    padding: 12px 0;
+    background-color: #FFFFFF;
+}
+
+.title {
+    margin: 0 9px 16px;
+}
+
+.patientSearch {
+    position: relative;
+    margin: 0 9px;
+}
+
+.patientSearchClear {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 36px;
+    height: 100%;
+    padding: 0 12px;
+    cursor: pointer;
+}
+
+.input {
+    width: 100%;
+    outline: none;
+    font-size: 14px;
+    line-height: 19px;
+    border-radius: 3px;
+    padding: 8px 12px;
+    border: 1px solid #E9E9E9;
+    background-color: transparent;
+
+    &:focus {
+        border: 1px solid #59B9EE;
+    }
+
+    &::placeholder {
+        color: #929292;
+        font-size: 14px;
+        line-height: 19px;
+    }
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        font-size: 14px;
+        line-height: 19px;
+        padding: 8px 12px;
+        cursor: pointer;
+
+        &:first-child {
+            margin-top: 16px;
+        }
+
+        &:hover {
+            background-color: #F8F8F8;
+        }
+    }
+}
+
+.stepTwo {
+    padding: 0 9px;
+}
+
+.buttonBack {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.patient {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.textareaBox {
+    margin-bottom: 16px;
+}
+
+.textarea {
+    width: 100%;
+    outline: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 3px;
+    border: 1px solid #E9E9E9;
+
+    &:focus-visible {
+        border: 1px solid #59B9EE;
+    }
+
+    &:focus {
+        border: 1px solid #59B9EE;
+    }
+
+    &::placeholder {
+        color: #929292;
+        font-size: 14px;
+        line-height: 19px;
+    }
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+
+    input, label {
+        cursor: pointer;
+    }
+
+    label {
+        font-size: 14px;
+        line-height: 19px;
+        color: #3E4855;
+        margin-bottom: 3px;
+    }
+
+    span {
+        font-size: 10px;
+        color: #3E4855;
+        font-weight: 300;
+        line-height: 11px;
+    }
+}

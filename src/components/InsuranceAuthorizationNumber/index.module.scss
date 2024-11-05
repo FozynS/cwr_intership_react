@@ -1,0 +1,15 @@
+.helpIcon {
+    cursor: pointer;
+
+    svg {
+        display: block !important;
+    }
+}
+
+.almostOverdue {
+    color: rgb(208, 155, 0);
+}
+
+.overdue {
+    color: rgb(251, 0, 7);
+}

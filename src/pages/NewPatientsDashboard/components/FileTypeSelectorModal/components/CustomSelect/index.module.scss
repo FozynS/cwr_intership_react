@@ -1,0 +1,38 @@
+.selectInput {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 25px 0 10px;
+    border: 1px solid rgb(229, 232, 235);
+    border-radius: 5px;
+    height: 40px;
+
+    div {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .arrow {
+        position: absolute;
+        right: 5px;
+    }
+
+}
+
+.options {
+    position: absolute;
+    height: 280px;
+    overflow: auto;
+    top: 46px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid rgb(229, 232, 235);
+    z-index: 1;
+}
+
+.isFocused {
+    box-shadow: 0px 0px 1px 4px rgb(169, 210, 242);
+}

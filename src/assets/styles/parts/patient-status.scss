@@ -1,0 +1,23 @@
+.patient-status {
+  &--active {
+    color: rgb(2, 167, 86);
+  }
+  &--archived {
+    color: rgb(177, 177, 177);
+  }
+  &--discharged {
+    color: rgb(0, 0, 255);
+  }
+  &--inactive {
+    color: rgb(208, 155, 0);
+  }
+  &--lost {
+    color: rgb(251, 0, 7);
+  }
+  &--new {
+    color: rgb(0, 0, 0);
+  }
+  &--other {
+    color: rgb(0, 0, 0);
+  }
+}

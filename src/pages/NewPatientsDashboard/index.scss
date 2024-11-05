@@ -1,0 +1,25 @@
+.smooth-dnd-container.horizontal {
+    display: flex;
+    gap: 24px;
+}
+
+.smooth-dnd-container.vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+    background-color: #F4F6F9;
+    border-radius: 8px;
+    overflow: auto;
+    width: 312px;
+    min-height: 560px;
+
+    .smooth-dnd-draggable-wrapper {
+        overflow: visible;
+        height: fit-content;
+    }
+}
+
+.react-trello-lane:hover {
+    display: none;
+}

@@ -1,0 +1,43 @@
+.box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.search, .clear {
+  position: absolute;
+}
+
+.search {
+  left: 12px;
+}
+
+.clear {
+  right: 0;
+  width: 36px;
+  height: 100%;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.input {
+  width: 100%;
+  outline: none;
+  color: #929292;
+  font-size: 14px;
+  line-height: 19px;
+  border-radius: 3px;
+  border: 1px solid #E9E9E9;
+  padding: 8px 30px 8px 38px;
+  &:focus {
+    border: 1px solid #59B9EE;
+  }
+  &:not(:placeholder-shown) {
+    border: 1px solid #59B9EE;
+  }
+}
+
+input::placeholder {
+  color: #929292;
+}

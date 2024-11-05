@@ -1,0 +1,75 @@
+.filterMultipleSelect {
+    position: relative;
+    height: 100%;
+    width: 334px;
+
+    .title {
+        padding: 12px;
+        height: 100%;
+        border: 1px solid #DEDEDE;
+        border-radius: 8px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        background-color: #FFFFFF;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+
+        span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        b {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .arrow {
+            flex-shrink: 0;
+        }
+
+    }
+
+    .showOptions {
+        border: 2px solid #3386C7;
+        background-color: #2D85C914;
+    }
+
+    .options {
+        position: absolute;
+        height: 400px;
+        overflow: auto;
+        background-color: #FFFFFF;
+        padding: 8px 16px 8px 0;
+        border-radius: 8px;
+        width: 100%;
+        z-index: 1;
+        box-shadow: 0px 18px 80px 0px #244A6A0F;
+
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 8px 16px;
+
+            input[type="checkbox"] {
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+                flex-shrink: 0;
+                margin-top: 0;
+            }
+
+            label {
+                width: 100%;
+                cursor: pointer;
+            }
+        }
+    }
+}

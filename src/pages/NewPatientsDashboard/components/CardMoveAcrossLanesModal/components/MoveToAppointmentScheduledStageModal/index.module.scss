@@ -1,0 +1,81 @@
+.formCheck {
+    font-size: 14px;
+}
+
+.formLabel {
+    width: 300px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.formInput {
+    width: 68px;
+
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+.formListInputBtn {
+    background: none;
+    border: none;
+    padding: 6px;
+
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: .9;
+    }
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.formTagList {
+    list-style: none;
+    margin: 0 -8px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.formTagListItem {
+    padding: 0 8px;
+    margin-bottom: 20px;
+}
+
+.formTag {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #59b9ee;
+    border-radius: 4px;
+    padding: 10px 7px 10px 13px;
+    width: 183px;
+    height: 36px;
+}
+
+.formTagText {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #ffffff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.formTagRemove {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    padding: 6px;
+}

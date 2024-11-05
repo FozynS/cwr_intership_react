@@ -1,0 +1,20 @@
+.status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    width: 24px;
+    height: 24px;
+}
+
+.notSend {
+    background-color: #FB0007;
+}
+
+.send {
+    background-color: #F39C12;
+}
+
+.signed {
+    background-color: #02A756;
+}
