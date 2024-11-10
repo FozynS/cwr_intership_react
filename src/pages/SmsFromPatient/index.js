@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container } from "react-bootstrap";
+import { io } from "socket.io-client";
 
 import { getAllSms, getUnreadCount } from "../../api/pages/sms-page";
 
@@ -7,7 +8,7 @@ import SmsPageContext from "../../contexts/SmsPageContext";
 
 import AppMainLayout from "../../layouts/AppMainLayout";
 
-import { initialTableParams } from "../../constants/faxes";
+import { initialTableParams, inbound } from "../../constants/sms";
 
 import Pagination from "../../components/Pagination";
 import SmsList from "./components/SmsList";
@@ -27,7 +28,7 @@ const SmsFromPatient = () => {
 
   const [isLoading, setIsLoading] = useState(false);
 
-  const inbound = 1;
+  const socket = io('http://127.0.0.1:8000');
 
   const updateData = (response) => {
     const data = response.data;
@@ -65,6 +66,17 @@ const SmsFromPatient = () => {
 
     return validData
   };
+
+  useEffect(() => {
+    socket.on("patient.{patientId}", (newSms) => {
+      setInitialPatientData((prevData) => [newSms, ...prevData]);
+      setUnreadCount((prevCount) => (prevCount || 0) + 1);
+    });
+
+    return () => {
+      socket.off("patient.{patientId}");
+    };
+  }, []);
 
 
   useEffect(() => {
