@@ -28,7 +28,7 @@ const SmsFromPatient = () => {
 
   const [isLoading, setIsLoading] = useState(false);
 
-  const socket = io('http://127.0.0.1:8000');
+  const socket = io('http://127.0.0.1:8001');
 
   const updateData = (response) => {
     const data = response.data;
@@ -76,8 +76,7 @@ const SmsFromPatient = () => {
     return () => {
       socket.off("patient.{patientId}");
     };
-  }, []);
-
+  }, [socket]);
 
   useEffect(() => {
     setIsLoading(true);

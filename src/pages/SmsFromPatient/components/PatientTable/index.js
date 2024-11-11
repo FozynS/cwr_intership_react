@@ -9,15 +9,15 @@ import {
 
 import { mdiMenuUp, mdiMenuDown } from "@mdi/js";
 import Icon from "@mdi/react";
-import { ROW_NUMBER_COLUMN } from "../../../../constants";
 
+import { ROW_NUMBER_COLUMN } from "../../../../constants";
 import SmsPageContext from "../../../../contexts/SmsPageContext";
 import NoData from "../../../../components/Table/components/NoData";
 import DataIsLoading from "../../../../components/Table/components/DataIsLoading";
+import { setSmsAsRead } from "../../../../api/pages/sms-page";
 
 import classNames from "classnames";
 import styles from "./index.module.scss";
-import { setSmsAsRead } from "../../../../api/pages/sms-page";
 
 const IndeterminateCheckbox = forwardRef(
   ({ indeterminate, isVerticallyCentered = false, ...rest }, ref) => {
@@ -184,7 +184,7 @@ const PatientTable = ({
 
   const unread = (row) => (row.is_read === false ? "unread" : "");
   const selected = (row) => (row.id === selectedRow?.id ? "selected" : "");
-  const archived = (row) => (row.is_archived === false ? "archived" : "");
+  const archived = (row) => (row.is_archived === false ? "" : "archived");
 
   return (
     <>
