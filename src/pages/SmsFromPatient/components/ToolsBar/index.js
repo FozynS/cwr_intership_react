@@ -14,6 +14,7 @@ const ToolsBar = () => {
     activeTab,
     setActiveTab,
     unreadCount,
+    currentPage,
     updateData,
     selectedRow,
     markedRows,
@@ -40,7 +41,7 @@ const ToolsBar = () => {
   const changeTabHandler = (value) => {
     setActiveTab(value)
     setIsLoading(true)
-    getAllSms(value, 1)
+    getAllSms(value, currentPage)
       .then(response => {
         if (response.status === 200) {
           updateData(response)

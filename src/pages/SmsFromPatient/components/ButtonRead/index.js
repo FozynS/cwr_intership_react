@@ -6,57 +6,30 @@ import { setSmsAsRead } from "../../../../api/pages/sms-page";
 const ButtonRead = () => {
   const { selectedRow, markedRows, setIsLoading } = useContext(SmsPageContext);
 
-  const readButtonHandler = () => {
-    if (!markedRows.length && selectedRow) {
-      setSmsAsRead([selectedRow])
-        .then((response) => {
-          if (response.status === 200) {
-            selectedRow.is_read = true;
-          }
-        })
-        .finally(() => {
-          setIsLoading(false);
-        });
-    }
+  const readButtonHandler = async () => {
 
     if (markedRows.length && !selectedRow) {
       let markedArray = [];
       markedRows.forEach((row) => {
         markedArray.push(row.original);
       });
-      setSmsAsRead([...markedArray])
-        .then((response) => {
-          if (response.status === 200) {
-            let changedRowArray = [...markedArray];
-            changedRowArray.forEach((row) => {
-              row.is_read = true;
-            });
-          }
+      await Promise.all(
+        markedArray.map(item => {
+          setSmsAsRead(item)
+          .then((response) => {
+            if (response.status === 200) {
+              let changedRowArray = [...markedArray];
+              changedRowArray.forEach((row) => {
+                row.is_read = true;
+              });
+            }
+          })
+          .finally(() => {
+            setIsLoading(false);
+            markedRows.forEach((row) => row.toggleRowSelected());
+          });
         })
-        .finally(() => {
-          setIsLoading(false);
-          markedRows.forEach((row) => row.toggleRowSelected());
-        });
-    }
-
-    if (markedRows.length && selectedRow) {
-      let markedArray = [];
-      markedRows.forEach((row) => {
-        markedArray.push(row.original);
-      });
-      setSmsAsRead([selectedRow, ...markedArray])
-        .then((response) => {
-          if (response.status === 200) {
-            let changedRowArray = [selectedRow, ...markedArray];
-            changedRowArray.forEach((row) => {
-              row.is_read = true;
-            });
-          }
-        })
-        .finally(() => {
-          setIsLoading(false);
-          markedRows.forEach((row) => row.toggleRowSelected());
-        });
+      )
     }
   };
 

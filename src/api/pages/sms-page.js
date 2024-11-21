@@ -1,18 +1,18 @@
 import axios from "axios";
 
-export const getAllSms = async (page, type) => {
+export const getAllSms = async (type, page) => {
   switch (type) {
     case 'all':
-      return await axios.get(`api/patients-sms-dashboard/all-messages`);
+      return await axios.get(`api/patients-sms-dashboard/all-messages?page=${page}`);
 
     case 'unread':
-      return await axios.get(`api/patients-sms-dashboard/all-messages?unread=false`);
+      return await axios.get(`api/patients-sms-dashboard/all-messages?unread=false&page=${page}`);
 
     case 'archived':
-      return await axios.get(`api/patients-sms-dashboard/all-messages?archived=true`);
+      return await axios.get(`api/patients-sms-dashboard/all-messages?archived=true&page=${page}`);
   
     default:
-      return await axios.get(`api/patients-sms-dashboard/all-messages`);
+      return await axios.get(`api/patients-sms-dashboard/all-messages?page=${page}`);
   }
 };
 
@@ -31,3 +31,7 @@ export const setSmsAsArchived = async (row) => {
     sms_id: [row.id]
   });
 };
+
+export const getUnreadCount = async () => {
+  return await axios.get('api/patients-sms-dashboard/all-messages/unread-status');
+}
